@@ -1,25 +1,35 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Login from "./Login.tsx"
-
+import Homepage from "./Pages/Home.tsx"
+//import Passengers from './Pages/Passengers.tsx';
+//import Busservices from "./Pages/Bus-services.tsx"
+import Chat from "./Pages/Chat.tsx"
 function App() {
-  // null = henüz denenmedi, true = giriş başarılı, false = giriş başarısız
+ 
   const [signinControl, setSigninControl] = useState<boolean | null>(null);
+  const [Homepageopen,Homepageclickcontrol]=useState(true);
 
   useEffect(() => {
-    // Sayfa ilk açıldığında (değer null iken) hiçbir şey yapma
+      
     if (signinControl === null) return;
 
     if (signinControl === true) {
       alert("Giriş yapıldı");
-    } else {
-      alert("Personel numaranız veya şifreniz yanlış tekrar deneyiniz...");
-    }
-  }, [signinControl]); // Sadece signinControl değiştiğinde çalışır
+      setSigninControl(false);
+      Homepageclickcontrol(true);
+    } 
+   
+  }, [signinControl]); 
+
 
   return (
     <div className='App'>
-      <Login param={setSigninControl} />
+      <Chat/>
+     {signinControl==false && <Login param={setSigninControl}/>} 
+     {Homepageopen!=false && <Homepage/>}
+
+
     </div>
   )
 }
