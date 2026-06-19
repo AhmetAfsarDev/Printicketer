@@ -21,7 +21,7 @@ function Login({ param }: LoginProps) {
 
     if (user) {
       setLoginControl(true);
-    
+
       param(true); 
     } else {
     
