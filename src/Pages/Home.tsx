@@ -24,7 +24,6 @@ function Home() {
 
         {/* =========================== Ticket input wrapper ============================ */ }
       
-          <section className='Mobileheader' ><h4>Yolcu bilgilerini giriniz</h4></section>
           <section className="ticketinputwrapper">
             <h3>Yolcu bilgilerini giriniz</h3>
           <input  type='text' placeholder='Müşteri adı'></input>
