@@ -326,11 +326,78 @@ html, body {
 ========================= */
 
 .Bus-services {
+  min-width: 100vw;
   min-height: 100dvh;
   display: grid;
   place-items: center;
 }
+.Bus-services .Header 
+{
+  position: fixed;
+  top:0;
+}
+.Servisdatabox
+{
+  width: 100vw;
+  height: 50vh;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.servicedatacontainer
+{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+.Servicelist
+{
+  width: 90vw;
+  height: 85vh;
+  background-color: var(--color-primary);
+  margin-top:98px;
+  border-radius: var(--radius-md);
+  box-shadow: 2px 2px 2px 2px #030408;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  gap:30px;
+  padding-top: 20px;
+}
+.service
+{
+  width: 50vw;
+  height: 50vh;
+  background-color: var(--color-text-muted);
+  list-style: none;
+  border-radius: var(--radius-md);
+  box-shadow: 2px 2px 2px 2px #030408;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:10px;
+  font-size: larger;
+  text-align: center;
+  align-items: center;
+  padding:30px;
+
+}
+.service span 
+{
+  width: clamp(30vw, 50px, 100%);
+  padding:10px;
+  background-color: var(--color-primary-dark);
+  border-radius: var(--radius-md);
+  color:var(--color-text-muted);
+  
+}
 /* =========================
    PASSENGERS
 ========================= */
@@ -378,13 +445,19 @@ html, body {
   color:var(--color-text-muted);
   font-weight: bolder;
 }
+.ticketinputwrapper h3 
+{
+  width:36vw;
+  margin-left:10px;
+  text-align: center;
+}
+
+
+
+
 /* =========================
    RESPONSIVE
 ========================= */
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -538,8 +611,42 @@ html, body {
   justify-content: center;
   position: fixed;
   bottom:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0px;
 }
 
+.Header ul li a 
+{
+  padding: 11px;
+}
+ .Servicelist
+{
+  width: 90vw;
+  height: 60vh;
+}
+.Servicelist
+{
+  width: 80vw;
+  height: 80vh;
+}
+.service
+{
+  width: 60vw;
+  height: 60vh;
+  padding-top:30px;
+}
+.service span 
+{
+  font-size: medium;
+  width: 50vw;
+}
+.ticketinputwrapper h3 
+{
+  width: 63vw;
+  text-align: center;
+}
 }
 
 
@@ -597,11 +704,39 @@ html, body {
   align-items: center;
   justify-content: center;
  }
+ .Servicelist
+{
+  width: 90vw;
+  height: 60vh;
+}
+.Servicelist
+{
+  width: 80vw;
+  height: 80vh;
+}
+.service
+{
+  height: 60vh;
+  padding-top:30px;
+}
 
 }
 
 @media (min-width:853px) and (max-width:1280px)
 {
+  .Home 
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .Header
+  {
+    position: fixed;
+    top:0;
+  }
   .activedrivers ul
   {
     height: 90vh;
@@ -612,9 +747,15 @@ html, body {
  }
  .ticketinputwrapper
  {
-  height: 85vh;
+  height: 40vh;
+  width: 70vw;
   margin-bottom:30px;
  }
+   .ticketinputwrapper h3 
+{
+  width: 36vw;
+  text-align: center;
+}
  .ticketinputwrapper input 
  {
    padding:2px;
@@ -635,4 +776,21 @@ html, body {
   align-items: center;
   justify-content: center;
  }
+ .Servicelist
+{
+  width: 90vw;
+  height: 60vh;
+}
+.Servicelist
+{
+  width: 80vw;
+  height: 80vh;
+}
+.service
+{
+  height: 60vh;
+  background-color: red;
+  padding-top:30px;
+}
+
 }
