@@ -1,21 +1,13 @@
 import React from 'react'
 import "../App.css"
+import Header from "../Header.tsx";
 
 function Passengers() {
   return (
     
     <div className='Passengers'>
-<section className='Header' >
-            <div className="logowrapper"><img src='../public/Logo.png' /></div>
-            <ul>
-              <li><a href="#">Müşteriler</a></li>
-              <li><a href="#">Seferler</a></li>
-              <li><a href="#">Sohbet</a></li>
-            </ul>
-        </section>
-
+        {<Header/>}
         
-
         <div className='ticketcard'>
          <div className='Passengerdatabox'>
                <h3>Yolcu bilgileri</h3>
