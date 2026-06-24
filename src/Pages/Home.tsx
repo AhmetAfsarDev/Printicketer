@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import "../App.css";
+import Header from "../Header.tsx";
 
 
 
@@ -10,14 +10,8 @@ function Home() {
     <div className='Home'>
      
         {/* ============================ Header ============================ */ }
-        <section className='Header' >
-            <div className="logowrapper"><img src='../public/Logo.png' /></div>
-            <ul>
-              <li><a href="#">Müşteriler</a></li>
-              <li><a href="#">Seferler</a></li>
-              <li><a href="#">Sohbet</a></li>
-            </ul>
-        </section>
+     
+        {<Header/>}
         {/* ================================================================ */ }
 
          
