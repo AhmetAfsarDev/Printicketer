@@ -1,16 +1,11 @@
 import React from 'react'
+import Header from "../Header.tsx";
 
 function Chat() {
   return (
     <div className='Chat' >
-         <section className='Header' >
-            <div className="logowrapper"><img src='../public/Logo.png' /></div>
-            <ul>
-              <li><a href="#">Müşteriler</a></li>
-              <li><a href="#">Seferler</a></li>
-              <li><a href="#">Sohbet</a></li>
-            </ul>
-        </section>
+        {<Header/>}
+        
 
         <div className="chatcontainer">
             <div className="activedrivers">
@@ -20,15 +15,7 @@ function Chat() {
                     <span className='Busplateinfo'>35 lw 97854</span>
                     </a></li>
 
-                    <li><a  href='#' className='Driver'>
-                    <span className="Drivername"><span className='Onlinechekking'>🟢</span> Mehmet buz </span>
-                    <span className='Busplateinfo'>35 lw 97854</span>
-                    </a></li>
-
-                      <li><a  href='#' className='Driver'>
-                    <span className="Drivername"><span className='Onlinechekking'>🟢</span> Mehmet buz </span>
-                    <span className='Busplateinfo'>35 lw 97854</span>
-                    </a></li>  
+                
                 </ul>
             </div>
 
